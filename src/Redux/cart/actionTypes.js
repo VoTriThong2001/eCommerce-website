@@ -1,19 +1,5 @@
-// export const GET_BAG_REQUEST = "GET_BAG_REQUEST";
-// export const GET_BAG_SUCCESS = "GET_BAG_SUCCESS";
-// export const GET_BAG_ERROR = "GET_BAG_ERROR";
-
-// // delete bag-
-// export const DELETE_BAG_REQUEST = "DELETE_BAG_REQUEST";
-// export const DELETE_BAG_SUCCESS = "DELETE_BAG_SUCCESS";
-// export const DELETE_BAG_ERROR = "DELETE_BAG_ERROR";
-
-// // ADD PRODUCT-
-// export const ADD_PRODUCT_REQUEST = "ADD_PRODUCT_REQUEST"
-// export const ADD_PRODUCT_SUCCESS = "ADD_PRODUCT_SUCCESS"
-// export const ADD_PRODUCT_ERROR = "ADD_PRODUCT_ERROR"
 
 //for All Users
-
 //on login in home page
 export const GET_CART_REQUEST = 'cart/GET_CART_REQUEST';
 export const GET_CART_SUCCESS = 'cart/GET_CART_SUCCESS';

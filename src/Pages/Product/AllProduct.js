@@ -17,14 +17,16 @@ const AllProduct = () => {
   // console.log(data)
   let length;
   if (query === "") {
-    length = 80;
+    length = 20;
   } else if (query === "preorder") {
-    length = 50;
+    length = 2;
   } else if (query === "game") {
-    length = 50;
+    length = 7;
   } else if (query === "sales") {
-    length = 50;
-  }
+    length = 4;
+  } else if (query === "merchandise") {
+  length = 7;
+}
   
   const [prevQuery, setPrevQuery] = useState(query);
   const {
@@ -53,13 +55,13 @@ const AllProduct = () => {
       templateColumns={{
         base: "repeat(1,1fr)",
         md: "repeat(2,1fr)",
-        lg: "repeat(3,1fr)",
+        lg: "repeat(4,1fr)",
       }}
       gap="10"
       p="10"
     >
 
-      {new Array(40).fill(0).map((e, i) => (
+      {new Array(20).fill(0).map((e, i) => (
         <Box w=" 100%" m="auto" boxShadow="lg" bg="white" key={i}>
           <Skeleton size="10" h="180px" />
           <SkeletonText
@@ -106,8 +108,9 @@ const AllProduct = () => {
         <div id="mainDiv">
           <div id="productList">
           {
-          data?.map((item,i) => (
-             <div id='singleProduct' key={item._id}>
+            // data.slice(0,8).map((item) => (
+          data.map((item, i) => (
+            <div id='singleProduct' key={item._id}>
               <Link to={`/products/${item._id}`}>
                   <img src={item.img} alt="" />
                   <h1 style={{ maxWidth: "35ch", textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap",fontSize: "large", fontWeight:"bolder" }} >{item.brand}</h1>
@@ -120,21 +123,17 @@ const AllProduct = () => {
                       <Text color="teal" fontSize="xs">Free Shipping</Text>
                     <div id="productButton">
                       <Button color="white"  variant='outline' className="btn1" width="100%">SEE DETAILS</Button>
-                      
                     </div>
               </Link>
             </div>
           ))
           }
-        </div>
+          </div>
         </div>
           <Flex justifyContent="center" gap="30px" marginTop="30px">
             <Button  disabled={page === 1} onClick={() => setPage(page - 1)}  colorScheme=' rgb(0, 0, 0);' color="white">Prev </Button>
             <Button  colorScheme=' rgb(0, 0, 0);' color="white" >{page}</Button>
-            <Button  colorScheme=' rgb(0, 0, 0);' color="white"
-            disabled={page === Math.ceil(length / 20)}
-            onClick={() => setPage(page + 1)}
-            > Next</Button>
+            <Button  colorScheme=' rgb(0, 0, 0);' color="white" disabled={page === Math.ceil(length / 8)} onClick={() => setPage(page + 1)}> Next</Button>
           </Flex>
       </div>
     </div>

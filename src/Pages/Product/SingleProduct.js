@@ -121,12 +121,6 @@ const SingleProduct = () => {
           </div>
           <div className="proQuantity">
             
-            <div className="selector">
-              <Select placeholder="Select Size" width="xs" zIndex="0">
-                <option value="option1">Small</option>
-                <option value="option2">Medium</option>
-              </Select>
-            </div>
           </div>
           <div className="proAdd">
             {auth.data.isAuthenticated ? (

@@ -22,9 +22,6 @@ function Footer() {
             {" "}
             CUSTOMER SUPPORT
           </Text>
-          <Text marginTop="15px" fontSize="16px">
-            Contact Us
-          </Text>
           <Link to={`/signup`}>
               <Text marginTop="20px" fontSize="16px">Account</Text>
           </Link>
@@ -32,19 +29,7 @@ function Footer() {
               <Text marginTop="20px" fontSize="16px">Help Center</Text>
           </Link>
         </Box>
-        <Box marginLeft="140px" marginTop="40px" color="white">
-          <Text
-            fontWeight="bold"
-            fontSize="16px"
-            borderBottom="1px solid yellow"
-          >
-            {" "}
-            ABOUT US
-          </Text>
-          <Text marginTop="20px" fontSize="16px">
-            Corporate Information
-          </Text>
-        </Box>
+       
         <Box marginLeft="120px" marginTop="40px" color="white">
           <Text
             fontWeight="bold"
@@ -66,33 +51,6 @@ function Footer() {
           <Link to={`/products?category=sales`}>
               <Text marginTop="20px" fontSize="16px">Sales</Text>
           </Link>
-        </Box>
-        <Box marginLeft="120px" marginTop="40px" color="white">
-          <Text
-            fontWeight="bold"
-            fontSize="16px"
-            borderBottom="1px solid yellow"
-          >
-            FOLLOW US
-          </Text>
-          <Box display="flex" gap="10px">
-            <FaFacebook className="iconFollow" />
-            <Text marginTop="25px" fontSize="18px">
-              Facebook
-            </Text>
-          </Box>
-          <Box display="flex" gap="10px">
-            <FaTwitter className="iconFollow" />
-            <Text marginTop="25px" fontSize="18px">
-              Twitter
-            </Text>
-          </Box>
-          <Box display="flex" gap="10px">
-            <FaYoutube className="iconFollow" />
-            <Text marginTop="25px" fontSize="18px">
-              YouTube
-            </Text>
-          </Box>
         </Box>
       </Box>
     </Box>
